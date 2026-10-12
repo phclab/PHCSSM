@@ -249,3 +249,24 @@ PolyForm Noncommercial 1.0.0. Noncommercial use is permitted, and educational
 institutions and public research organizations are covered regardless of the
 source of their funding. Commercial use is not licensed here. See `LICENSE`,
 which carries the contact for commercial licensing.
+
+## Text and data mining
+
+National Yang Ming Chiao Tung University, as rights holder, reserves the rights
+of reproduction and extraction of this repository for the purposes of text and
+data mining, including the training, fine-tuning, validation and evaluation of
+machine learning and generative artificial intelligence models. The reservation
+is made under Article 4(3) of Directive (EU) 2019/790 and is intended to be
+effective wherever a comparable reservation is recognized.
+
+The reservation does not restrict text and data mining carried out for
+scientific research by a research organization or a cultural heritage
+institution within the meaning of Article 3 of that Directive. Reading this
+code, studying it and reproducing the reported results are the reasons it was
+released.
+
+Independently of any statutory exception, commercial use is not licensed by
+`LICENSE`. Training a model that is offered commercially, or developed in
+anticipation of commercial application, is commercial use and falls outside the
+grant. A machine-readable form of this reservation is in
+`.well-known/tdmrep.json`.
