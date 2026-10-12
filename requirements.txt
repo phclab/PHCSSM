@@ -1,0 +1,11 @@
+# Versions this package was verified against. The CPU build of jaxlib is
+# pinned here so that the file resolves on any machine. A GPU run needs the
+# CUDA build of the same jax version, for example
+#   pip install "jax[cuda12]==0.10.0"
+# See https://docs.jax.dev/en/latest/installation.html
+jax==0.10.0
+jaxlib==0.10.0
+equinox==0.13.7
+optax==0.2.3
+numpy==2.4.4
+tqdm==4.66.5

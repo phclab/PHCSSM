@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+runs/
+grid/
+*.csv
+
+# Trained weights are not distributed. train.py writes them, and
+# rsnn/compare_modes.py reads whatever it is given.
+*.pth
+
+# PlatformIO build output for the STM32 port
+stm32/.pio/
