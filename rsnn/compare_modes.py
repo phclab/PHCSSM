@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+# Copyright National Yang Ming Chiao Tung University, Taiwan.
+# Creator Po-Han Chiang. Patent pending.
+# Noncommercial use only. For commercial licensing see LICENSE.
 """compare_modes.py
 ================================
 Inference-only sanity check that the trained PHCSSM weights also work in

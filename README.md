@@ -27,7 +27,6 @@ without costing the parallel scan.
 ```
 phcssm/        the model, the training loop, configuration loading
 train.py       stage two of the protocol, five-seed reporting
-grid_search.py stage one, the 24-configuration single-seed search
 configs/       the six selected configurations behind Table 1
 data/          the preparation script and the recorded train/val/test partition
 rsnn/          the sequential RSNN execution mode and the two-mode comparison
@@ -151,11 +150,13 @@ runs/heart_summary.json
 
 ## Reproduce Table 1
 
-Both stages train at the same budget, 10,000 epochs with early-stopping
-patience 1,000.
+`configs/` holds the six configurations the two-stage protocol selected, so
+reproducing Table 1 means running stage two on each of them.
 
-**Stage one.** A single-seed grid search, 24 configurations, selecting the
-highest validation accuracy.
+Stage one selected them with a single-seed grid search over 24 configurations,
+taking the highest validation accuracy and breaking ties on validation accuracy
+under a second seed. Both stages train at the same budget, 10,000 epochs with
+early-stopping patience 1,000.
 
 | Axis | Values |
 |---|---|
@@ -164,23 +165,13 @@ highest validation accuracy.
 | Readout source | voltage, spike |
 | Topology mask | 0 feedforward, 1 bidirectional |
 
-```bash
-python grid_search.py --config configs/scp2.json --data-root /path/to/datasets
-```
+The search driver is not included, since `configs/` is its output. To run a
+search of your own, pass `evaluate_test=False` to `phcssm.trainer.train`, which
+skips the test evaluation entirely so that nothing a configuration is chosen on
+can come from the test split.
 
-Runs are cached under `--out`, so an interrupted sweep resumes. The leaderboard
-is ordered by validation accuracy and names any tie at the top together with the
-command that resolves it, which is validation accuracy under a second seed.
-
-Stage one does not score the test split. Validation accuracy is the only
-accuracy it computes, prints or caches.
-
-The configurations already in `configs/` are the ones this stage selected, so
-run stage one to reproduce the selection and skip it to go straight to the
-reported numbers.
-
-**Stage two.** Run `train.py` on the winner for all five seeds. Repeating that
-for the six configurations reproduces the PHCSSM row of Table 1.
+**Stage two.** Run `train.py` on a configuration for all five seeds. Repeating
+that for the six reproduces the PHCSSM row of Table 1.
 
 | Dataset | Learning rate | Neuron dim | Readout | Mask | Test accuracy | Parameters |
 |---|---|---|---|---|---|---|
@@ -195,8 +186,8 @@ Accuracy is the mean over the five seeds. The parameter column counts trainable
 parameters with the recurrent weight taken at its unmasked support, since the
 entries the topology mask zeroes carry no gradient.
 
-The mask column is the `hierarchy_matrix` of the configuration, which
-`grid_search.py` tags `hm0` and `hm1`.
+The mask column is the `hierarchy_matrix` of the configuration. The appendix
+hyperparameter table uses the same 0 and 1.
 
 ## The sequential RSNN mode
 

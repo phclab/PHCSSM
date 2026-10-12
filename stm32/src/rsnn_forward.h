@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+// Copyright National Yang Ming Chiao Tung University, Taiwan.
+// Creator Po-Han Chiang. Patent pending.
+// Noncommercial use only. For commercial licensing see LICENSE.
 // rsnn_forward.h
 // ==============
 // PHCSSM 1.0.0 RSNN sequential-deployment forward pass, FP32.

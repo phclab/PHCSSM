@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+# Copyright National Yang Ming Chiao Tung University, Taiwan.
+# Creator Po-Han Chiang. Patent pending.
+# Noncommercial use only. For commercial licensing see LICENSE.
 """rsnn_jax_cpu.py
 JAX/lax.scan port of NumPy RSNN forward, jit-able to CPU backend.
 Goal: same bit-level result as rsnn_forward.forward_sample
