@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: PHCSSM
+message: >-
+  If you use this software, please cite the paper it accompanies.
+type: software
+version: 1.0.0
+date-released: "2026-10-12"
+license: PolyForm-Noncommercial-1.0.0
+repository-code: "https://github.com/phclab/PHCSSM"
+abstract: >-
+  Reference implementation of PHCSSM, a spiking state-space model carrying five
+  biological constraints inside a fully parallelizable recurrence. The temporal
+  recurrences are evaluated by a log-domain prefix scan, and spatial coupling is
+  settled on a second axis, the within-timestep transmission loop.
+authors:
+  - family-names: Chiang
+    given-names: Po-Han
+    orcid: "https://orcid.org/0000-0003-4100-4051"
+    affiliation: National Yang Ming Chiao Tung University
+keywords:
+  - spiking neural networks
+  - state-space models
+  - parallel scan
+  - time series classification
+  - neuromorphic computing
+preferred-citation:
+  type: article
+  title: >-
+    Parallelized Hierarchical Connectome: A Spatiotemporal Recurrent Framework
+    for Spiking State-Space Models
+  authors:
+    - family-names: Chiang
+      given-names: Po-Han
+      orcid: "https://orcid.org/0000-0003-4100-4051"
+      affiliation: National Yang Ming Chiao Tung University
+  journal: Array
+  publisher:
+    name: Elsevier
+  year: 2026
+  notes: In press

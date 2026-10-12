@@ -8,6 +8,21 @@ Reference implementation for
 
 National Yang Ming Chiao Tung University, Taiwan.
 
+To cite this work, cite the paper.
+
+```bibtex
+@article{chiang2026phcssm,
+  title   = {Parallelized Hierarchical Connectome: A Spatiotemporal Recurrent
+             Framework for Spiking State-Space Models},
+  author  = {Chiang, Po-Han},
+  journal = {Array},
+  year    = {2026},
+  note    = {In press},
+}
+```
+
+`CITATION.cff` carries the same entry in a machine-readable form.
+
 PHCSSM is a spiking state-space model carrying five biological constraints
 inside a fully parallelizable recurrence. The constraints are ALIF dynamics,
 lateral and feedback connectivity, Tsodyks-Markram short-term plasticity,
