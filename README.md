@@ -4,7 +4,8 @@ Reference implementation for
 
 > Po-Han Chiang. **Parallelized Hierarchical Connectome: A Spatiotemporal
 > Recurrent Framework for Spiking State-Space Models.** *Array* (Elsevier),
-> 2026, in press.
+> 2026, 101315.
+> [10.1016/j.array.2026.101315](https://doi.org/10.1016/j.array.2026.101315)
 
 National Yang Ming Chiao Tung University, Taiwan.
 
@@ -17,7 +18,8 @@ To cite this work, cite the paper.
   author  = {Chiang, Po-Han},
   journal = {Array},
   year    = {2026},
-  note    = {In press},
+  pages   = {101315},
+  doi     = {10.1016/j.array.2026.101315},
 }
 ```
 
